@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
 @Component
-public class AopUtil {
+public class AOPUtil {
 	
 	public ModelAndView checkParams(ProceedingJoinPoint jp) throws Throwable {
 		ModelAndView mav = new ModelAndView();

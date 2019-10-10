@@ -26,6 +26,8 @@
 	<context:component-scan base-package="spring.project.test" />
 	
 	<aop:aspectj-autoproxy />
-	<beans:bean id="homeAOP" class="spring.project.test.aop.HomeAOP" />
+	<!-- <beans:bean id="homeAOP" class="spring.project.test.aop.HomeAOP" /> -->
+	<beans:bean id="homeAOP2" class="spring.project.test.aop.HomeAOP2" />
+	<beans:bean id="homeAOP3" class="spring.project.test.aop.HomeAOP3" />
 	
 </beans:beans>

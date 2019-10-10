@@ -1,9 +1,5 @@
 package spring.project.test.aop;
 
-import java.util.Enumeration;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -18,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeAOP {
 	
 	@Autowired
-	AopUtil au;
+	AOPUtil au;
 	
 	@Pointcut("within(spring.project.test.controller.HomeController)")
 	public void pointcut() {}
@@ -34,7 +30,7 @@ public class HomeAOP {
 	@After("pointcut()")
 	public void after(JoinPoint jp) {
 		end = System.currentTimeMillis();
-//		System.out.println(jp.getSignature().toShortString() + ": " + ( (float) ((end-start) / 1000)));
+		System.out.println(jp.getSignature().toShortString() + ": " + ( (float) ((end-start) / 1000)));
 		System.out.println(jp.getSignature().toShortString() + ": End :D");
 	}
 	
@@ -43,6 +39,5 @@ public class HomeAOP {
 		System.out.println("AOP :D");
 		return au.checkParams(jp);
 	}
-	
 	
 }
